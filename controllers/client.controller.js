@@ -3,7 +3,7 @@ const { findMemoClient } = require("./findMemo.controller")
 const promoCodeModel = require("../models/promoCode.model")
 const ipfpModel = require("../models/ipfp.model")
 const { getDepositTokenClient } = require('./depositToken.controller')
-const { f8betClient } = require('./addpoint.controller')
+const { hi88Client } = require('./addpoint.controller')
 const { getTimeZoneClient } = require('./getTimeZone.controller')
 const { getMemberBOClient } = require('./getMemberBO.controller')
 
@@ -186,7 +186,7 @@ module.exports = {
                                     text_mess: 'Mất kết nối đến máy chủ. Xin vui lòng thử lại.'
                                 })
                             } else {
-                                let addPointResult = await f8betClient(query.player_id, find[0].point, deposit, find[0].promo_id, find[0].round)    //Cộng điểm trên BO
+                                let addPointResult = await hi88Client(query.player_id, find[0].point, deposit, find[0].promo_id, find[0].round)    //Cộng điểm trên BO
                                 if(addPointResult == 502) {
                                     res.json({  
                                         status_code: 502,

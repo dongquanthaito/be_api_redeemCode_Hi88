@@ -3,7 +3,7 @@ const information = require('../const/information');
 const tokenBOModel = require('../models/tokenBO.model');
 
 module.exports = {
-    f8bet: async (req, res)=>{
+    hi88: async (req, res)=>{
 
         let getToken = tokenBOModel.findOne({Account: information.usernameBO}).exec()
         if(getToken) {
@@ -58,7 +58,7 @@ module.exports = {
         }
         
     }, 
-    f8betClient: async (player_id, point, deposit, memo, round)=>{
+    hi88Client: async (player_id, point, deposit, memo, round)=>{
         let getToken = await tokenBOModel.findOne({Account: information.usernameBO}).exec()
         if(getToken) {
             try {
